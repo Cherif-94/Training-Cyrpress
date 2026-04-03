@@ -1,33 +1,21 @@
 class LoginPage {
 
-
-    get Visit() {
-        return cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    get visitWebsite() {
+        return cy.visit('https://qacart-todo.herokuapp.com/');
     }
 
-    get getUsername() {
-        return cy.get('[name="username"]');
+    get inputEmail() {
+        return cy.get('[data-testid="email"]')
     }
 
-    get getPassword() {
-        return cy.get('[name="password"]');
+    get inputPassword() {
+        return cy.get('[data-testid="password"]')
     }
 
-    get getLoginButton() {
-        return cy.get('.oxd-button')
+    get submitButton() {
+        return cy.get('[data-testid="submit"]')
     }
 
-    get CheckDashboard() {
-        return cy.get('.oxd-topbar-header-breadcrumb > .oxd-text')
-    }
-
-    get getErrorMessage() {
-        return cy.get('.oxd-alert-content > .oxd-text');
-    }
-
-    get getRequiredMessage() {
-        return cy.get(':nth-child(2) > .oxd-input-group > .oxd-text')
-    }
 
 }
 
